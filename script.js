@@ -95,4 +95,4 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentYear = new Date().getFullYear();
         yearElement.textContent = yearElement.textContent.replace('2023', currentYear);
     }
-})
+});
