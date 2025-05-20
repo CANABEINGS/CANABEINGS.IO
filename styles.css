@@ -208,9 +208,11 @@ a {
     color: var(--dark);
 }
 
-.cta-buttons {
+.cta-buttons.single-centered {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .hero-visual {
