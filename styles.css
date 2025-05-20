@@ -170,12 +170,14 @@ a {
 }
 
 .menu-toggle {
+    display: none; /* Hidden by default on desktop */
     background: none;
     border: none;
-    color: white;
+    color: var(--dark); /* Changed from white to match your theme */
     font-size: 24px;
     cursor: pointer;
     z-index: 1001;
+    padding: 10px;
 }
 
 .menu-overlay {
@@ -188,21 +190,21 @@ a {
     z-index: 998;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .menu-sidebar {
     position: fixed;
     top: 0;
-    right: -40%;
-    width: 40%;
+    right: -100%; /* Start completely off-screen */
+    width: 80%; /* More space on mobile */
     height: 100%;
-    background: #000;
+    background: var(--darker); /* Using your color variable */
     z-index: 999;
     overflow-y: auto;
-    transition: right 0.3s ease;
+    transition: var(--transition);
     padding: 20px;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-xl);
 }
 
 .menu-sidebar.active {
@@ -217,12 +219,13 @@ a {
 .menu-close {
     background: none;
     border: none;
-    color: white;
+    color: var(--light);
     font-size: 24px;
     position: absolute;
     top: 20px;
     right: 20px;
     cursor: pointer;
+    padding: 5px;
 }
 
 .menu-items {
@@ -236,33 +239,40 @@ a {
 }
 
 .menu-items li a {
-    color: white;
+    color: var(--light);
     text-decoration: none;
     font-size: 18px;
     display: block;
     padding: 10px 0;
-    transition: color 0.3s;
+    transition: var(--transition);
 }
 
 .menu-items li a:hover {
-    color: #ccc;
+    color: var(--primary);
 }
 
+/* Dropdown styles */
 .menu-dropdown .dropdown-items {
     list-style: none;
     padding-left: 20px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: var(--transition);
 }
 
 .menu-dropdown.active .dropdown-items {
-    max-height: 200px;
+    max-height: 500px; /* Increased for better visibility */
+    padding-top: 10px;
+}
+
+.menu-dropdown > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu-dropdown a i {
-    margin-left: 5px;
-    transition: transform 0.3s;
+    transition: var(--transition);
 }
 
 .menu-dropdown.active a i {
@@ -899,6 +909,18 @@ a {
 @media (max-width: 768px) {
     .nav-links, .social-links {
         display: none;
+    @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-links, .social-links {
+        display: none;
+    }
+    
+    /* Prevent scrolling when menu is open */
+    body.menu-open {
+        overflow: hidden;
     }
     
     .menu-toggle {
