@@ -1,4 +1,3 @@
-<script>
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const menuSidebar = document.querySelector('.menu-sidebar');
@@ -33,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-</script>
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
