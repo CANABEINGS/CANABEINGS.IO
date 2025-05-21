@@ -31,8 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             dropdown.classList.toggle('active');
         });
     });
-});
-    
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -49,17 +48,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 // Close mobile menu if open
-                navLinks.classList.remove('active');
-                socialLinks.classList.remove('active');
-                menuToggle.classList.remove('active');
+                menuSidebar.classList.remove('active');
+                menuOverlay.classList.remove('active');
             }
         });
     });
-    
+
     // Header scroll effect
     const header = document.querySelector('.header');
     let lastScroll = 0;
-    
+
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset;
         
@@ -78,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         lastScroll = currentScroll;
     });
-    
+
     // Animate elements when they come into view
     const animateOnScroll = function() {
         const elements = document.querySelectorAll('.vision-card, .step, .phase, .testimonial-card');
@@ -92,10 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     };
-    
+
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll(); // Run once on page load
-    
+
     // Newsletter form submission
     const newsletterForm = document.querySelector('.newsletter-form form');
     if (newsletterForm) {
@@ -111,11 +109,11 @@ document.addEventListener('DOMContentLoaded', function() {
             emailInput.value = '';
         });
     }
-    
+
     // Current year for footer
     const yearElement = document.querySelector('.footer-bottom p');
     if (yearElement) {
         const currentYear = new Date().getFullYear();
-        yearElement.textContent = yearElement.textContent.replace('2023', currentYear);
+        yearElement.textContent = yearElement.textContent.replace('2025', currentYear);
     }
-})
+});
