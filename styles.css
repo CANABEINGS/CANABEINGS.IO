@@ -9,21 +9,21 @@
     --lighter: #FFFFFF;
     --gray: #A1A1B5;
     --success: #4BB543;
-    
+
     --font-heading: 'Kanit', sans-serif;
     --font-body: 'Space Grotesk', sans-serif;
-    
+
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
     --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
     --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
     --shadow-xl: 0 20px 50px rgba(0,0,0,0.2);
-    
+
     --rounded-sm: 4px;
     --rounded-md: 8px;
     --rounded-lg: 16px;
     --rounded-xl: 24px;
     --rounded-full: 9999px;
-    
+
     --transition: all 0.3s ease;
 }
 
@@ -170,10 +170,10 @@ a {
 }
 
 .menu-toggle {
-    display: none; /* Hidden by default on desktop */
+    display: none;
     background: none;
     border: none;
-    color: var(--dark); /* Changed from white to match your theme */
+    color: var(--dark);
     font-size: 24px;
     cursor: pointer;
     z-index: 1001;
@@ -196,10 +196,10 @@ a {
 .menu-sidebar {
     position: fixed;
     top: 0;
-    right: -100%; /* Start completely off-screen */
-    width: 80%; /* More space on mobile */
+    right: -100%;
+    width: 80%;
     height: 100%;
-    background: var(--darker); /* Using your color variable */
+    background: var(--darker);
     z-index: 999;
     overflow-y: auto;
     transition: var(--transition);
@@ -261,7 +261,7 @@ a {
 }
 
 .menu-dropdown.active .dropdown-items {
-    max-height: 500px; /* Increased for better visibility */
+    max-height: 500px;
     padding-top: 10px;
 }
 
@@ -896,50 +896,43 @@ a {
     .hero h1 {
         font-size: 48px;
     }
-    
+
     .ecosystem-visual {
         flex-direction: column;
     }
-    
+
     .phone-mockup {
         margin: 0 auto;
     }
 }
 
 @media (max-width: 768px) {
-    .nav-links, .social-links {
-        display: none;
-    @media (max-width: 768px) {
     .menu-toggle {
         display: block;
     }
-    
+
     .nav-links, .social-links {
         display: none;
     }
-    
+
     /* Prevent scrolling when menu is open */
     body.menu-open {
         overflow: hidden;
     }
-    
-    .menu-toggle {
-        display: block;
-    }
-    
+
     .hero {
         padding: 150px 0 80px;
         text-align: center;
     }
-    
+
     .hero-content {
         margin: 0 auto 60px;
     }
-    
+
     .cta-buttons {
         justify-content: center;
     }
-    
+
     .hero-visual {
         height: auto;
         display: flex;
@@ -947,12 +940,12 @@ a {
         align-items: center;
         gap: 40px;
     }
-    
+
     .nft-card, .physical-product {
         position: static;
         transform: none;
     }
-    
+
     .newsletter-form form {
         flex-direction: column;
     }
@@ -962,27 +955,27 @@ a {
     .hero h1 {
         font-size: 36px;
     }
-    
+
     .hero .subtitle {
         font-size: 18px;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .btn {
         width: 100%;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
-    
+
     .legal-links {
         justify-content: center;
     }
-  
+}
